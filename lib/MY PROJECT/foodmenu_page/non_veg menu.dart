@@ -10,6 +10,7 @@ class nonvegssmenu extends StatefulWidget{
 
 class _nonvegiesmenuState extends State<nonvegssmenu> {
   int index=1;
+  List<String> filterednonveg=[];
   List<String> nonveglist = [];
   var nonveg=["Chicken biriyani","Beef biriyani","Mutton biriyani","Egg biriyani","Fish biriyani","Chemmeen biriyani","Neychor","Chicken stew","Beef stew","Mutton stew","Broasted chicken","Alpaham","Shavaya","Chilli chikken","Chicken tikka","Chicken 65","Egg roast","Chemmeen roast","Kada roast","Beef fry"];
   @override
@@ -25,6 +26,11 @@ class _nonvegiesmenuState extends State<nonvegssmenu> {
                     decoration: BoxDecoration(
                         color: Colors.white,  borderRadius: BorderRadiusDirectional.circular(100)),
                     child: TextField(
+                      onChanged: (value){
+                        setState(() {
+                          filterednonveg=nonveg.where((nonveg) => nonveg.toLowerCase().contains(value.toLowerCase())).toList();
+                        });
+                      },
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.search,color: Colors.black,),
                           hintText: "Find your Non-veg varieties here",hintStyle: GoogleFonts.aclonica(),
@@ -38,29 +44,30 @@ class _nonvegiesmenuState extends State<nonvegssmenu> {
                 delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
                     return ListTile(
-                      title: Text(nonveg[index]),
+                      title: Text(filterednonveg.isNotEmpty ?filterednonveg[index]:nonveg[index]),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           ElevatedButton.icon(onPressed: (){
                             setState(() {
-                              if(nonveglist.contains(nonveg[index]))
+                              final selectednonveg = filterednonveg.isNotEmpty ? filterednonveg[index] : nonveg[index];
+                              if(nonveglist.contains(selectednonveg))
                                 {
-                                  nonveglist.remove(nonveg[index]);
+                                  nonveglist.remove(selectednonveg);
                                 }
                               else
                                 {
-                                  nonveglist.add(nonveg[index]);
+                                  nonveglist.add(selectednonveg);
                                 }
                             });
                           }, icon: Icon(Icons.favorite),
-                              label: Text(nonveglist.contains(nonveg[index])?"Remove":"Add",style: TextStyle(color: Colors.black),),
+                              label: Text(nonveglist.contains(filterednonveg.isNotEmpty? filterednonveg[index]: nonveg[index])?"Remove":"Add",style: TextStyle(color: Colors.black),),
                           style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow[100]),)
                         ],
                       )
                     );
                   },
-                  childCount: 20,
+                  childCount: filterednonveg.isNotEmpty?filterednonveg.length:nonveg.length,
                 ),
               ),
             ]),

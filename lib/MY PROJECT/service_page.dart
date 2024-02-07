@@ -2,8 +2,8 @@ import 'package:flutter/material.darT';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/menu.dart';
 
- void main(){runApp(MaterialApp(home: services(),
- useInheritedMediaQuery: true,));}
+ // void main(){runApp(MaterialApp(home: services(),
+ // useInheritedMediaQuery: true,));}
 class services extends StatefulWidget
 {
   @override
