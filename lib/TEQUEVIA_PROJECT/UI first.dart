@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+
+import 'package:flutter/material.darT';
+
 void main(){runApp(MaterialApp(debugShowCheckedModeBanner: false,
   useInheritedMediaQuery: true,
   home: nameui(),));}
