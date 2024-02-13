@@ -1,4 +1,4 @@
-import 'package:flutter/material.darT';
+ import 'package:flutter/material.darT';
 import 'package:google_fonts/google_fonts.dart';
 
 class nonvegScreen extends StatelessWidget {

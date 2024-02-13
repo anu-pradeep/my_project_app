@@ -1,9 +1,10 @@
 import 'package:flutter/material.darT';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/menu.dart';
-import 'package:my_project_app/MY%20PROJECT/foodmenu_page/snack_wishlist.dart';
 // void main(){runApp(MaterialApp(home: snacksmenu(),));}
 import 'package:flutter/material.dart';
+import 'package:my_project_app/MY%20PROJECT/foodmenu_page/wishlist.dart';
+
 class snacksmenu extends StatefulWidget {
   @override
   State<snacksmenu> createState() => _snackmenuState();
@@ -106,7 +107,7 @@ class _snackmenuState extends State<snacksmenu> {
           BottomNavigationBarItem(
             icon: IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => snacklistScreen(snacklist: snacklist,)));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistScreen(wishlist: snacklist,)));
               },
               icon: Icon(Icons.shopping_cart),
             ),

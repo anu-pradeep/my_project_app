@@ -172,7 +172,7 @@ class _foodmenuState extends State<foodmenu> {
           },
             icon: Icon(Icons.home_filled),),label: "Home"),
           BottomNavigationBarItem(icon: IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>WishlistScreen(wishlist: wishlist,)));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>WishlistScreen(wishlist:wishlist,)));
           }, icon: Icon(Icons.shopping_cart),),label: "Cart"),
           BottomNavigationBarItem(icon:IconButton(onPressed: (){
             // Navigator.push(context, MaterialPageRoute(builder: (context)=>maincart()));

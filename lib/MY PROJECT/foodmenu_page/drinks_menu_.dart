@@ -1,7 +1,7 @@
 import 'package:flutter/material.darT';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_project_app/MY%20PROJECT/foodmenu_page/drink%20wishlist.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/menu.dart';
+import 'package:my_project_app/MY%20PROJECT/foodmenu_page/wishlist.dart';
 // // void main(){
 // // runApp(MaterialApp(home: drinkmenu(),));}
 class drinkmenu extends StatefulWidget {
@@ -104,7 +104,7 @@ class _drinkmenuState extends State<drinkmenu> {
             Navigator.push(context, MaterialPageRoute(builder: (context) => foodmenu()));
           }, icon: Icon(Icons.home_filled),), label: "Home"),
           BottomNavigationBarItem(icon: IconButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => drinklistScreen(drinklist: drinklist)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistScreen(wishlist: drinklist,)));
           }, icon: Icon(Icons.shopping_cart),), label: "Cart"),
           BottomNavigationBarItem(icon: IconButton(onPressed: () {}, icon: Icon(Icons.card_giftcard_sharp),), label: "Orders"),
         ],

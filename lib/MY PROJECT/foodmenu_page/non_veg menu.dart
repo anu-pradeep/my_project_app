@@ -2,6 +2,7 @@ import 'package:flutter/material.darT';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/menu.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/non%20veg_wishlist.dart';
+import 'package:my_project_app/MY%20PROJECT/foodmenu_page/wishlist.dart';
 // void main(){runApp(MaterialApp(home: nonvegssmenu(),));}
 class nonvegssmenu extends StatefulWidget{
   @override
@@ -88,7 +89,7 @@ class _nonvegiesmenuState extends State<nonvegssmenu> {
                Navigator.push(context, MaterialPageRoute(builder: (context)=>foodmenu()));
              }, icon: Icon(Icons.home_filled),),label: "Home"),
               BottomNavigationBarItem(icon: IconButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>nonvegScreen(nonvegList:nonveglist,)));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>WishlistScreen(wishlist: nonveglist,)));
               }, icon: Icon(Icons.shopping_cart),
               ),label: "Cart"),
               BottomNavigationBarItem(icon:IconButton(onPressed: (){},
