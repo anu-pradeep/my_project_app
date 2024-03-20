@@ -225,3 +225,42 @@
 //   }
 //
 //anagha's code
+// import 'package:flutter/material.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('InkWell Ripple Effect'),
+//         ),
+//         body: Center(
+//           child: InkWell(
+//             onTap: () {
+//               print('InkWell tapped!');
+//             },
+//             splashColor: Colors.blue, // Set the splash color
+//             highlightColor: Colors.green, // Set the highlight color
+//             borderRadius: BorderRadius.circular(20), // Set the border radius
+//             child: Container(
+//               padding: EdgeInsets.all(12.0),
+//               child: Text(
+//                 'Tap me!',
+//                 style: TextStyle(fontSize: 20.0),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+
+// height: Get.height * .2,
+// width: Get.width,

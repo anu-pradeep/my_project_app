@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/menu.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/non%20veg_wishlist.dart';
 import 'package:my_project_app/MY%20PROJECT/foodmenu_page/wishlist.dart';
-// void main(){runApp(MaterialApp(home: nonvegssmenu(),));}
+void main(){runApp(MaterialApp(home: nonvegssmenu(),));}
 class nonvegssmenu extends StatefulWidget{
   @override
   State<nonvegssmenu> createState() => _nonvegiesmenuState();
